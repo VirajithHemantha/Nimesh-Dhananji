@@ -77,7 +77,7 @@ html, body {
   width: clamp(300px, 38vw, 620px);
   aspect-ratio: 1 / 1;
   opacity: var(--mandala-accent-opacity);
-  filter: sepia(1) saturate(1.55) hue-rotate(285deg) brightness(1.12) contrast(1.05);
+  filter: sepia(1) saturate(1.8) hue-rotate(5deg) brightness(1.12) contrast(1.05);
 }
 
 .mandala-corner.is-soft {
