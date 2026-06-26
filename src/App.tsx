@@ -348,7 +348,7 @@ export default function WeddingInvitation() {
 
               {/* Left Flap */}
               <motion.div
-                className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-br from-[#3b2f21] via-[#4f3e26] to-[#2a2215] z-30 shadow-[8px_0_28px_rgba(45,25,12,0.45)] origin-left flex items-center justify-end pr-4 overflow-hidden rounded-l-[1.2rem]"
+                className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-br from-[#c89945] via-[#dfbb73] to-[#ab7c31] z-30 shadow-[8px_0_28px_rgba(139,103,45,0.45)] origin-left flex items-center justify-end pr-4 overflow-hidden rounded-l-[1.2rem]"
                 whileHover={{ rotateY: -14 }}
                 transition={{ type: "spring", stiffness: 110, damping: 16 }}
               >
@@ -359,23 +359,23 @@ export default function WeddingInvitation() {
                 {/* Envelope Illustrations */}
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -top-20 md:-top-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-55 mix-blend-screen"
+                  className="absolute -top-20 md:-top-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-40 mix-blend-multiply"
                   alt=""
                 />
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -bottom-20 md:-bottom-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-50 mix-blend-screen -rotate-90"
+                  className="absolute -bottom-20 md:-bottom-28 -left-20 md:-left-28 w-56 md:w-72 h-56 md:h-72 opacity-40 mix-blend-multiply -rotate-90"
                   alt=""
                 />
 
-                <div className="text-theme-100/35 rotate-90 whitespace-nowrap text-xs tracking-[0.55em] uppercase font-bold relative z-10">
+                <div className="text-white/60 rotate-90 whitespace-nowrap text-xs tracking-[0.55em] uppercase font-bold relative z-10">
                   NIMESH & DHANANJI
                 </div>
               </motion.div>
 
               {/* Right Flap */}
               <motion.div
-                className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-bl from-[#3b2f21] via-[#4f3e26] to-[#2a2215] z-30 shadow-[-8px_0_28px_rgba(45,25,12,0.45)] origin-right flex items-center justify-start pl-4 overflow-hidden rounded-r-[1.2rem]"
+                className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-bl from-[#c89945] via-[#dfbb73] to-[#ab7c31] z-30 shadow-[-8px_0_28px_rgba(139,103,45,0.45)] origin-right flex items-center justify-start pl-4 overflow-hidden rounded-r-[1.2rem]"
                 whileHover={{ rotateY: 14 }}
                 transition={{ type: "spring", stiffness: 110, damping: 16 }}
               >
@@ -386,12 +386,12 @@ export default function WeddingInvitation() {
                 {/* Envelope Illustrations */}
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -top-20 md:-top-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-55 mix-blend-screen rotate-90"
+                  className="absolute -top-20 md:-top-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-40 mix-blend-multiply rotate-90"
                   alt=""
                 />
                 <InviteImage
                   src={mandalaImage}
-                  className="absolute -bottom-20 md:-bottom-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-50 mix-blend-screen rotate-180"
+                  className="absolute -bottom-20 md:-bottom-28 -right-20 md:-right-28 w-56 md:w-72 h-56 md:h-72 opacity-40 mix-blend-multiply rotate-180"
                   alt=""
                 />
               </motion.div>
@@ -400,12 +400,12 @@ export default function WeddingInvitation() {
               <motion.div
                 whileHover={{ scale: 1.1, rotate: -6 }}
                 whileTap={{ scale: 0.9 }}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-theme-200 via-[#fffbf5] to-theme-300 shadow-[0_20px_45px_-10px_rgba(124,72,30,0.65)] border-[5px] border-[#433423] flex items-center justify-center group-hover:shadow-theme-500/40"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-theme-200 via-[#fffbf5] to-theme-300 shadow-[0_20px_45px_-10px_rgba(184,140,66,0.65)] border-[5px] border-[#a67c33] flex items-center justify-center group-hover:shadow-theme-500/40"
               >
                 <div className="absolute inset-1.5 rounded-full border border-theme-400/50" />
                 <div className="absolute inset-3 rounded-full border border-theme-500/30" />
                 <div className="text-center relative z-10">
-                  <p className="font-cinzel text-[1.7rem] font-bold text-stone-800 leading-none">N&R</p>
+                  <p className="font-cinzel text-[1.7rem] font-bold text-stone-800 leading-none">N&D</p>
                   <div className="h-px w-12 bg-stone-400 mx-auto my-1.5" />
                   <p className="text-[8px] uppercase tracking-[0.35em] font-bold text-stone-600">Open</p>
                 </div>
@@ -456,7 +456,7 @@ export default function WeddingInvitation() {
                 transition={{ duration: 2, ease: "easeOut" }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-cinzel text-[40vw] text-theme-900 pointer-events-none whitespace-nowrap leading-none select-none z-0"
               >
-                N&R
+                N&D
               </motion.div>
 
               {/* Central Premium Arch Card */}
