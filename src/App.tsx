@@ -204,6 +204,9 @@ export default function WeddingInvitation() {
   const audioRef = React.useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const queryParams = new URLSearchParams(window.location.search);
+  const guestName = queryParams.get('to');
+
   useEffect(() => {
     if (isOpened) {
       setIsPlaying(true);
@@ -594,6 +597,11 @@ export default function WeddingInvitation() {
                   className="flex flex-col items-center mb-8 md:mb-16"
                 >
                   <div className="w-px h-16 md:h-24 bg-gradient-to-b from-transparent to-theme-400 mb-6 md:mb-10" />
+                  {guestName && (
+                    <h2 className="font-playball text-4xl md:text-5xl text-theme-800 mb-6 drop-shadow-sm leading-none text-center px-4">
+                      Dear {guestName},
+                    </h2>
+                  )}
                   <p className="text-theme-700 text-[9px] md:text-[12px] tracking-[0.4em] md:tracking-[0.6em] uppercase font-bold text-center leading-loose">
                     You are cordially invited to<br className="hidden md:block" /> celebrate the union of
                   </p>
