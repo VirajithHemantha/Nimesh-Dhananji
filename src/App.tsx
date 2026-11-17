@@ -731,6 +731,80 @@ export default function WeddingInvitation() {
               </div>
             </section>
 
+            {/* Couple Gallery Section */}
+            <section className="cv-auto py-24 md:py-36 bg-[#fdfaf5] relative overflow-hidden flex flex-col items-center">
+              <div className="absolute inset-0 opacity-[0.04] paper-grain pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[900px] aspect-square bg-theme-100 blur-[120px] rounded-full opacity-40 pointer-events-none" />
+
+              <div className="w-full max-w-[1000px] px-4 flex flex-col items-center text-center relative z-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center mb-14 md:mb-20"
+                >
+                  <div className="flex items-center gap-4 md:gap-8 justify-center mb-6 opacity-70">
+                    <div className="h-px w-16 md:w-32 bg-gradient-to-r from-transparent to-theme-400" />
+                    <div className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
+                    <div className="h-px w-16 md:w-32 bg-gradient-to-l from-transparent to-theme-400" />
+                  </div>
+                  <h2 className="font-cinzel text-3xl md:text-5xl text-theme-900 tracking-widest font-bold drop-shadow-sm leading-[1.4]">
+                    Moments <span className="font-playball text-theme-700 italic lowercase tracking-normal text-4xl md:text-7xl ml-1">of us</span>
+                  </h2>
+                  <p className="mt-4 text-[9px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.5em] text-theme-600 font-bold">
+                    Our journey, so far
+                  </p>
+                </motion.div>
+
+                <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-14 md:gap-16">
+                  {[
+                    { src: "/images/couple-sea.jpg", alt: "Nimesh and Dhananji on a boat at sunset", tilt: "md:-rotate-2", offset: "" },
+                    { src: "/images/couple-garden.jpg", alt: "Nimesh and Dhananji dancing in a garden", tilt: "md:rotate-2", offset: "md:mt-28" },
+                  ].map((photo, i) => (
+                    <motion.figure
+                      key={photo.src}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.9, delay: i * 0.15, ease: "easeOut" }}
+                      className={`relative group ${photo.offset}`}
+                    >
+                      <div className={`relative transition-transform duration-700 group-hover:rotate-0 ${photo.tilt}`}>
+                        <div className="absolute -inset-4 rounded-t-full rounded-b-[2rem] bg-theme-200/40 blur-2xl" />
+                        <div className="relative bg-white p-2.5 md:p-3 rounded-t-full rounded-b-[2rem] border border-theme-200 shadow-[0_30px_60px_-20px_rgba(124,72,30,0.45)]">
+                          <div className="relative overflow-hidden rounded-t-full rounded-b-[1.6rem] w-[260px] h-[380px] md:w-[320px] md:h-[470px]">
+                            <InviteImage
+                              src={photo.src}
+                              alt={photo.alt}
+                              className="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 rounded-t-full rounded-b-[1.6rem] ring-1 ring-inset ring-white/40 pointer-events-none" />
+                            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
+                          </div>
+                          <div className="absolute inset-[18px] md:inset-[22px] rounded-t-full rounded-b-[1.2rem] border border-white/60 pointer-events-none" />
+                        </div>
+                      </div>
+                      <figcaption className="mt-7 flex items-center justify-center gap-3 opacity-70">
+                        <span className="h-px w-8 bg-gradient-to-r from-transparent to-theme-400" />
+                        <span className="font-cinzel text-[10px] md:text-xs tracking-[0.5em] text-theme-700 pl-[0.5em]">{i === 0 ? "I" : "II"}</span>
+                        <span className="h-px w-8 bg-gradient-to-l from-transparent to-theme-400" />
+                      </figcaption>
+                    </motion.figure>
+                  ))}
+                </div>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, delay: 0.3 }}
+                  className="mt-16 md:mt-20 max-w-md font-cinzel italic text-sm md:text-base text-theme-700/80 tracking-wide leading-relaxed"
+                >
+                  “Every love story is beautiful, but ours is our favourite.”
+                </motion.p>
+              </div>
+            </section>
+
             {/* Countdown Section */}
             <section className="cv-auto py-24 md:py-36 bg-[#fffcf5] relative border-y border-theme-100/30 flex flex-col items-center overflow-hidden">
               {/* Premium Background Elements */}
