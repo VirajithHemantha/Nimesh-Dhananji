@@ -620,7 +620,7 @@ export default function WeddingInvitation() {
                       src={brideGroomImage}
                       alt="Bride and groom wedding illustration"
                       loading="eager"
-                      className="w-[200px] h-[240px] md:w-[270px] md:h-[320px] object-cover rounded-[1.6rem] border border-theme-100"
+                      className="w-[200px] h-auto md:w-[270px] object-contain rounded-[1.6rem] border border-theme-100 bg-white"
                     />
                   </div>
                 </motion.div>
